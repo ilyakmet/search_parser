@@ -18,7 +18,7 @@ def get_yandex_urls_by_page_num(query, page=0):
         #print(g.response.body)
         return [x.attr('href') for x in g.doc.select('//a[@class="link organic__url link link_cropped_no"]')]
     except:
-        print('get_yandex_urls_by_page_num error')
+        print('get_yandex_urls_by_page_num error', page)
         return []
 
 def get_yandex_urls_by_sup(query, sup=1):
